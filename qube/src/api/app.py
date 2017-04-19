@@ -18,8 +18,8 @@ fileConfig(logging_config)
 
 app = Flask(__name__)
 api = Api(app, api_version='0.1', api_spec_url='/specs')
-DEFAULT_HOST = os.environ.get('DEFAULT_LISTENER_HOST', '0.0.0.0')
-DEFAULT_PORT = int(os.environ.get('DEFAULT_LISTENER_PORT', '80'))
+DEFAULT_HOST = '0.0.0.0'
+DEFAULT_PORT = 80
 DEBUG = os.environ.get('DEBUG', 'False') \
     in ("yes", "y", "true", "True", "t", "1")
 
