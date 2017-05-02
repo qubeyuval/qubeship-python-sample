@@ -1,0 +1,32 @@
+id: a05d278c-9699-4d78-bb48-fe89e778ae27
+version: v2
+name: HyunjiTester0502
+apptype: api
+language: python
+containerName: hyunjitester0502
+toolchain:
+  id: 5908cf49d1a47f001d10b95a
+  name: Qubeship-Python-Toolchain
+opinion:
+  id: 5908cf7dacfc9a000b226a5f
+  name: Qubeship default opinion
+endpoint:
+  id: 5908cf49168303000bee528c
+  name: Qubeship Sandbox Cluster
+  type: target
+variables:
+  - name: APP_VERSION
+    value: v0.1
+build:
+  compile:
+    publish:
+     - dist/
+bake:
+  skip: false
+test:
+  skip: true
+deploy_to_qa:
+  skip: true
+deploy_to_prod:
+  skip: false
+
